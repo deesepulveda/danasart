@@ -1,0 +1,40 @@
+.section-services {
+  @include keep-it-hundo;
+
+  .section-services-bg {
+    width: 80%;
+    height: auto;
+    @include absol-center;
+
+    img {
+      @include keep-it-hundo;
+      object-fit: contain;
+      // animation: spinCircle 10s linear infinite;
+      // -webkit-animation: spinCircle 10s linear infinite;
+    }
+  }
+
+  .section-services-bg-overlay {
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: linear-gradient(to top, $color-dark, rgba(5, 5, 5, 0.473));
+  }
+}
+
+@keyframes spinCircle {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+  }
+}

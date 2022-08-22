@@ -1,0 +1,18 @@
+.container-overall-scroll {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+
+  .sections {
+    width: 100%;
+    max-width: 120rem;
+    height: 100vh;
+    margin: 0 auto;
+    scroll-snap-align: center;
+    position: relative;
+    overflow: hidden;
+    // border: 1px solid green;
+  }
+}
