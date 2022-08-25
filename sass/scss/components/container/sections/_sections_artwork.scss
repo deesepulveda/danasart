@@ -1,7 +1,5 @@
 .section-artwork {
   @include keep-it-hundo;
-  min-width: 100vw;
-  overflow: hidden;
 
   &::before {
     content: "";
@@ -22,5 +20,317 @@
     background-size: cover;
     background-attachment: fixed;
     z-index: -2;
+  }
+
+  .section-artwork-container {
+    @include keep-it-hundo;
+    max-width: 120rem;
+    margin: 0 auto;
+    @include flex-center-col;
+    //border: 1px solid green;
+
+    @include tabletLandscape {
+      & {
+        display: block;
+        position: relative;
+      }
+    }
+
+    @include desktop4K {
+      & {
+        max-width: 160rem;
+      }
+    }
+
+    .section-artwork-content-container {
+      width: 95%;
+      height: auto;
+      margin: 0 auto 2rem;
+      padding: 1rem;
+      //border: 1px solid green;
+
+      @include tabletPortrait {
+        & {
+          width: 80%;
+          margin-bottom: 10rem;
+        }
+      }
+
+      @include tabletLandscape {
+        & {
+          width: 65%;
+          margin: 0;
+          position: absolute;
+          top: 15%;
+          left: 7%;
+        }
+      }
+
+      @include tabletLandscapeXL {
+        & {
+          top: 20%;
+          left: 5%;
+        }
+      }
+
+      @include desktopFullHD {
+        & {
+          left: 4%;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          width: 70%;
+          top: 25%;
+          left: 1%;
+        }
+      }
+
+      @include desktop4K {
+        & {
+          top: 25%;
+          left: 0%;
+        }
+      }
+
+      .section-artwork-content-title {
+        width: 100%;
+        margin-bottom: 1rem;
+
+        @include tabletLandscape {
+          & {
+            margin-bottom: 2rem;
+          }
+        }
+
+        p {
+          width: 100%;
+          margin: 0 auto;
+          font-size: 1.75rem;
+          text-transform: initial;
+          font-family: $quaternary-font;
+
+          @include tabletPortrait {
+            & {
+              font-size: 3rem;
+            }
+          }
+
+          @include tabletLandscape {
+            & {
+              text-align: left;
+            }
+          }
+
+          @include tabletLandscapeXL {
+            & {
+              font-size: 4rem;
+            }
+          }
+
+          @include desktopQuadHD {
+            & {
+              font-size: 5rem;
+            }
+          }
+
+          @include desktop4K {
+            & {
+              font-size: 7rem;
+            }
+          }
+        }
+      }
+
+      .section-artwork-content-info,
+      .section-artwork-content-disclaimer {
+        width: 100%;
+        text-align: left;
+        text-transform: initial;
+      }
+
+      .section-artwork-content-info {
+        margin-bottom: 1rem;
+
+        @include tabletLandscapeXL {
+          & {
+            margin-bottom: 2rem;
+          }
+        }
+
+        p {
+          font-size: 1.25rem;
+          line-height: 2rem;
+
+          @include tabletPortrait {
+            & {
+              font-size: 1.75rem;
+            }
+          }
+
+          @include tabletLandscapeXL {
+            & {
+              font-size: 2rem;
+            }
+          }
+
+          @include desktopQuadHD {
+            & {
+              font-size: 2.5rem;
+              line-height: 3rem;
+            }
+          }
+
+          @include desktop4K {
+            & {
+              font-size: 3.25rem;
+              line-height: 4rem;
+              margin-bottom: 3rem;
+            }
+          }
+
+          span {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            padding: 0.25rem 0.75rem;
+            letter-spacing: 0.1rem;
+            color: $color-yellow;
+            border: 0.1rem solid $color-yellow;
+            border-radius: 0.25rem;
+            -webkit-border-radius: 0.25rem;
+            -moz-border-radius: 0.25rem;
+            -ms-border-radius: 0.25rem;
+            -o-border-radius: 0.25rem;
+
+            @include tabletLandscapeXL {
+              & {
+                font-size: 1.5rem;
+                padding: 0.5rem 1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .section-artwork-content-disclaimer {
+        font-size: 1rem;
+
+        @include tabletPortrait {
+          & {
+            font-size: 1.15rem;
+          }
+        }
+
+        @include tabletLandscapeXL {
+          & {
+            font-size: 1.25rem;
+          }
+        }
+
+        @include desktop4K {
+          & {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .section-artwork-frames-container {
+      width: 35rem;
+      height: 35rem;
+      position: relative;
+      // border: 1px solid blue;
+
+      @include tabletPortrait {
+        & {
+          margin-bottom: 10rem;
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+        }
+      }
+
+      @include tabletLandscape {
+        & {
+          margin: 0;
+          position: absolute;
+          top: 27%;
+          right: 10%;
+        }
+      }
+
+      @include tabletLandscapeXL {
+        & {
+          top: 35%;
+          transform: scale(1.5);
+          -webkit-transform: scale(1.5);
+          -moz-transform: scale(1.5);
+          -ms-transform: scale(1.5);
+          -o-transform: scale(1.5);
+        }
+      }
+
+      @include desktopFullHD {
+        & {
+          right: 10%;
+        }
+      }
+
+      @include desktopQuadHD {
+        & {
+          top: 40%;
+          right: 10%;
+          transform: scale(1.8);
+          -webkit-transform: scale(1.8);
+          -moz-transform: scale(1.8);
+          -ms-transform: scale(1.8);
+          -o-transform: scale(1.8);
+        }
+      }
+
+      @include desktop4K {
+        & {
+          top: 42%;
+          right: 15%;
+          transform: scale(2.5);
+          -webkit-transform: scale(2.5);
+          -moz-transform: scale(2.5);
+          -ms-transform: scale(2.5);
+          -o-transform: scale(2.5);
+        }
+      }
+
+      .section-artwork-frames-box {
+        width: 16rem;
+        height: auto;
+
+        img {
+          @include keep-it-hundo;
+          object-fit: cover;
+        }
+      }
+
+      .frame-one {
+        position: absolute;
+        right: 5%;
+      }
+
+      .frame-two {
+        position: absolute;
+        top: 20%;
+        left: 5%;
+        box-shadow: 2rem -2rem 2.5rem $color-dark;
+      }
+
+      .frame-three {
+        position: absolute;
+        top: 35%;
+        right: 10%;
+        box-shadow: -0.8rem -0.8rem 2.5rem $color-dark;
+      }
+    }
   }
 }

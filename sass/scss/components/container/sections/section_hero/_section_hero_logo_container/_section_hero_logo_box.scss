@@ -1,12 +1,11 @@
 .section-hero-logo-container {
   @include keep-it-hundo;
-  max-width: 120rem;
+  // max-width: 120rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  //border: 1px solid red;
 
   .section-hero-logo-box {
     width: 100%;
@@ -29,7 +28,36 @@
 
     @include desktop {
       & {
+        width: 35%;
         margin-top: 10rem;
+      }
+    }
+
+    @include tabletLandscapeXL {
+      & {
+        width: 40%;
+        margin-top: 20rem;
+      }
+    }
+
+    @include desktopFullHD {
+      & {
+        width: 30%;
+        margin-top: 15rem;
+      }
+    }
+
+    @include desktopQuadHD {
+      & {
+        width: 35%;
+        margin-top: 25rem;
+      }
+    }
+
+    @include desktop4K {
+      & {
+        // width: 25%;
+        margin-top: 40rem;
       }
     }
 
@@ -37,11 +65,21 @@
       @include keep-it-hundo;
       object-fit: contain;
       margin-bottom: 5rem;
+      filter: drop-shadow(0.2rem 0.2rem 0.4rem $color-dark);
+      -webkit-filter: drop-shadow(0.2rem 0.2rem 0.4rem $color-dark);
+
+      @include desktopQuadHD {
+        & {
+          margin-bottom: 7rem;
+        }
+      }
     }
 
     .section-hero-content-box {
       width: 100%;
+      max-width: 120rem;
       height: auto;
+      margin: 0 auto;
 
       @include tabletPortrait {
         & {
@@ -57,68 +95,31 @@
 
       p {
         font-size: 1.75rem;
+        @include text-shadow;
 
         @include tabletPortrait {
           & {
             font-size: 2rem;
           }
         }
-      }
-    }
-  }
 
-  .section-cta-btn-container {
-    width: 100%;
-    height: 10rem;
-    position: fixed;
-    bottom: 5%;
-    @include flex-center;
-    z-index: 80;
+        @include desktopFullHD {
+          & {
+            font-size: 2.25rem;
+          }
+        }
 
-    .cta-btns {
-      position: relative;
-      text-decoration: none;
-      padding: 0.5rem 2rem;
-      font-size: 1.75rem;
-      letter-spacing: 0.4rem;
-      font-family: $quaternary-font;
-      @include transit3;
-      border-radius: 0.5rem;
-      -webkit-border-radius: 0.5rem;
-      -moz-border-radius: 0.5rem;
-      -ms-border-radius: 0.5rem;
-      -o-border-radius: 0.5rem;
+        @include desktopQuadHD {
+          & {
+            font-size: 2.5rem;
+          }
+        }
 
-      &:hover {
-        transform: translateY(-1rem);
-        -webkit-transform: translateY(-1rem);
-        -moz-transform: translateY(-1rem);
-        -ms-transform: translateY(-1rem);
-        -o-transform: translateY(-1rem);
-        box-shadow: 0rem 2rem 4rem $color-dark;
-      }
-    }
-
-    .cta-btns-discover {
-      margin-right: 2rem;
-      color: $color-dark;
-      background-color: $color-cyan;
-      border: 0.1rem solid $color-cyan;
-
-      &:hover {
-        background-color: $color-cyan-dark;
-        border: 0.1rem solid $color-cyan-dark;
-        color: $color-lite;
-      }
-    }
-
-    .cta-btns-shop {
-      color: $color-yellow;
-      border: 0.1rem solid $color-yellow;
-
-      &:hover {
-        background-color: $color-yellow;
-        color: $color-dark;
+        @include desktop4K {
+          & {
+            font-size: 3rem;
+          }
+        }
       }
     }
   }

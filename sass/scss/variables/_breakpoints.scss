@@ -39,6 +39,13 @@
   }
 }
 
+// TABLET (IPAD 12") LANDSCAPE (1366 x 1024 pixels)
+@mixin tabletLandscapeXL {
+  @media only screen and (min-width: 1366px) {
+    @content;
+  }
+}
+
 // DESKTOP 1080 FULL HD (1920 x 1080 pixels)
 @mixin desktopFullHD {
   @media only screen and (min-width: 1920px) {

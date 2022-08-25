@@ -1,0 +1,74 @@
+.section-cta-btn-container {
+  width: 100%;
+  height: 10rem;
+  position: fixed;
+  bottom: 5%;
+  @include flex-center;
+  z-index: 80;
+
+  @include tabletPortrait {
+    & {
+      bottom: 10%;
+    }
+  }
+
+  .cta-btns {
+    position: relative;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    font-size: 1.75rem;
+    letter-spacing: 0.4rem;
+    font-family: $quaternary-font;
+    @include transit3;
+    @include text-shadowgray;
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+
+    @include desktopFullHD {
+      & {
+        font-size: 2.5rem;
+      }
+    }
+
+    @include desktop4K {
+      & {
+        font-size: 3rem;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-1rem);
+      -webkit-transform: translateY(-1rem);
+      -moz-transform: translateY(-1rem);
+      -ms-transform: translateY(-1rem);
+      -o-transform: translateY(-1rem);
+      box-shadow: 0rem 2rem 4rem $color-dark;
+    }
+  }
+
+  .cta-btns-discover {
+    margin-right: 2rem;
+    color: $color-dark;
+    background-color: $color-cyan;
+    border: 0.1rem solid $color-cyan;
+
+    &:hover {
+      background-color: $color-cyan-dark;
+      border: 0.1rem solid $color-cyan-dark;
+      color: $color-lite;
+    }
+  }
+
+  .cta-btns-shop {
+    color: $color-yellow;
+    border: 0.1rem solid $color-yellow;
+
+    &:hover {
+      background-color: $color-yellow;
+      color: $color-dark;
+    }
+  }
+}

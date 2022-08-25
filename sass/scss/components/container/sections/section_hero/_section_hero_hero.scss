@@ -1,6 +1,5 @@
 .section-hero {
   @include keep-it-hundo;
-  min-width: 100vw;
   overflow: hidden;
 
   &::before {
@@ -14,7 +13,8 @@
 
   &::after {
     content: "";
-    @include keep-it-hundo;
+    width: 100vw;
+    height: 100%;
     @include absol-topLeftZero;
     background: url(../public/images/tim-arterbury-VkwRmha1_tI-unsplash.jpg);
     background-position: left;

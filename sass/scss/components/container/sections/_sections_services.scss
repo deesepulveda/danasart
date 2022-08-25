@@ -1,23 +1,19 @@
 .section-services {
   @include keep-it-hundo;
+  max-width: 120rem;
 
   .section-services-bg {
-    width: 80%;
+    width: 60%;
     height: auto;
     @include absol-center;
-
+    max-width: 120rem;
     img {
       @include keep-it-hundo;
       object-fit: contain;
+      opacity: 0.2;
       // animation: spinCircle 10s linear infinite;
       // -webkit-animation: spinCircle 10s linear infinite;
     }
-  }
-
-  .section-services-bg-overlay {
-    @include keep-it-hundo;
-    @include absol-topLeftZero;
-    background: linear-gradient(to top, $color-dark, rgba(5, 5, 5, 0.473));
   }
 }
 

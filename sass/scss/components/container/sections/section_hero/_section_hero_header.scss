@@ -1,16 +1,29 @@
 .section-hero-header {
   width: 100%;
-  // max-width: 120rem;
+  max-width: 120rem;
   height: 1rem;
   margin: 0 auto;
   position: fixed;
   top: 0;
   z-index: 90;
-  //border-bottom: 1px solid red;
 
   @include desktop {
     & {
       height: 8rem;
+      left: 50%;
+      @include transformX;
+    }
+  }
+
+  @include desktopQuadHD {
+    & {
+      height: 10rem;
+    }
+  }
+
+  @include desktop4K {
+    & {
+      height: 15rem;
     }
   }
 
@@ -85,7 +98,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      // border: 1px solid green;
 
       @include desktop {
         & {
@@ -97,7 +109,27 @@
 
       .section-header-nav-li {
         width: auto;
+        position: relative;
         list-style-type: none;
+
+        &::after {
+          content: "";
+          width: 0;
+          height: 130%;
+          @include absol-center;
+          @include transit3;
+          background-color: $color-gray-lite;
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          z-index: -1;
+        }
+
+        &:hover::after {
+          width: 130%;
+        }
 
         &:not(:last-child) {
           margin-bottom: 4rem;
@@ -108,10 +140,16 @@
               margin-bottom: 0;
             }
           }
+
+          @include desktopQuadHD {
+            & {
+              margin-right: 10rem;
+            }
+          }
         }
 
         a {
-          width: auto;
+          width: 100%;
           text-decoration: none;
           color: $color-lite;
           font-size: 2.25rem;
@@ -122,6 +160,19 @@
           @include desktop {
             & {
               font-size: 1.5rem;
+              font-family: $primary-font;
+            }
+          }
+
+          @include desktopQuadHD {
+            & {
+              font-size: 2rem;
+            }
+          }
+
+          @include desktop4K {
+            & {
+              font-size: 2.25rem;
             }
           }
 
