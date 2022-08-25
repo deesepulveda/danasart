@@ -67,9 +67,16 @@
   }
 }
 
+// DESKTOP ULTRAWIDE HD (3440 x 1440 pixels)
+@mixin desktopUltraWide {
+  @media only screen and (min-width: 3440px) {
+    @content;
+  }
+}
+
 // DESKTOP UHD (3840 x 2160 pixels)
-@mixin desktopUHD {
-  @media only screen and (min-width: 3840) {
+@mixin desktopUltraHD {
+  @media only screen and (min-width: 3840px) {
     @content;
   }
 }

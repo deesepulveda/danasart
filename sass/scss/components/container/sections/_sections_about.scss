@@ -1,4 +1,370 @@
 .section-about {
-  // background: red;
   max-width: 120rem;
+
+  .bg-image {
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    @include flex-center;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+      width: 170%;
+      height: 170%;
+      margin-bottom: 10rem;
+      object-fit: cover;
+    }
+  }
+
+  .section-about-content-wrapper {
+    width: 100%;
+    height: 50rem;
+    position: absolute;
+    top: 13%;
+    left: 0;
+    @include flex-center-col;
+    justify-content: space-between;
+    //border: 1px solid red;
+
+    @include tabletPortrait {
+      & {
+        height: 65rem;
+      }
+    }
+
+    @include tabletLandscape {
+      & {
+        width: 80rem;
+        height: 45rem;
+        left: 50%;
+        @include transformX;
+      }
+    }
+
+    @include tabletLandscapeXL {
+      & {
+        height: 62rem;
+      }
+    }
+
+    @include desktopQuadHD {
+      & {
+        width: 100rem;
+        height: 83rem;
+      }
+    }
+
+    @include desktopUltraHD {
+      & {
+        padding-top: 10rem;
+        height: 125rem;
+      }
+    }
+
+    .section-about-content-container {
+      width: 100%;
+      height: auto;
+      @include flex-center-col;
+      // border: 1px solid greenyellow;
+
+      @include tabletPortrait {
+        & {
+          padding: 0 2rem;
+        }
+      }
+
+      @include tabletLandscapeXL {
+        & {
+          padding: 0;
+        }
+      }
+      .section-about-content-container-title {
+        width: 100%;
+        margin-bottom: 2rem;
+        //border: 1px solid green;
+
+        @include tabletLandscape {
+          & {
+            margin-bottom: 0;
+          }
+        }
+
+        @include desktop {
+          & {
+            text-align: left;
+            padding-left: 2rem;
+          }
+        }
+
+        .about-title {
+          font-size: 2.5rem;
+          color: $color-lite;
+          font-family: $quaternary-font;
+          text-transform: initial;
+          letter-spacing: 0.1rem;
+
+          @include tabletPortrait {
+            & {
+              font-size: 4rem;
+            }
+          }
+
+          @include tabletLandscape {
+            & {
+              font-size: 3rem;
+            }
+          }
+
+          @include desktopQuadHD {
+            & {
+              font-size: 4rem;
+            }
+          }
+        }
+      }
+
+      .section-about-content-container-bio {
+        width: 100%;
+        height: 80%;
+        @include flex-center;
+        justify-content: space-between;
+        // border: 1px solid red;
+
+        .section-about-content-bio-media {
+          width: auto;
+          height: 100%;
+          margin-top: 3rem;
+          @include flex-center-col;
+          justify-content: flex-start;
+          // border: 1px solid red;
+
+          @include tabletPortrait {
+            & {
+              margin-top: 5rem;
+            }
+          }
+
+          @include tabletLandscapeXL {
+            & {
+              margin-top: 8rem;
+            }
+          }
+
+          @include desktopQuadHD {
+            & {
+              margin-top: 20rem;
+            }
+          }
+
+          .bio-media-box-icons {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 2rem;
+            @include flex-center;
+            background: url(../public/images/DanasArtworkCircleWhite.png);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @include tabletPortrait {
+              & {
+                width: 6rem;
+                height: 6rem;
+              }
+            }
+
+            @include desktopQuadHD {
+              & {
+                width: 8rem;
+                height: 8rem;
+              }
+            }
+
+            &:not(:last-child) {
+              margin-bottom: 1.5rem;
+
+              @include desktopQuadHD {
+                & {
+                  margin-bottom: 2rem;
+                }
+              }
+            }
+          }
+
+          i {
+            position: relative;
+            font-size: 2rem;
+            color: $color-lite;
+            @include transit3;
+
+            @include tabletPortrait {
+              & {
+                font-size: 2.25rem;
+              }
+            }
+
+            @include desktopQuadHD {
+              & {
+                font-size: 2.75rem;
+              }
+            }
+
+            &:hover {
+              color: $color-cyan;
+            }
+          }
+        }
+
+        .section-about-content-bio-name {
+          width: auto;
+          height: 100%;
+
+          @include flex-center-col;
+          justify-content: flex-start;
+          align-items: flex-end;
+          //border: 1px solid red;
+
+          @include desktop {
+            & {
+              margin-top: -12rem;
+            }
+          }
+
+          @include desktopQuadHD {
+            & {
+              margin-top: -10rem;
+            }
+          }
+
+          .section-about-content-bio-name-full {
+            margin-right: 2rem;
+            opacity: 0.75;
+
+            p {
+              // margin: 0;
+              font-size: 7rem;
+              font-family: $quaternary-font;
+              -webkit-text-stroke: 0.1rem $color-gray-lite;
+              -webkit-text-fill-color: transparent;
+
+              @include tabletPortrait {
+                & {
+                  font-size: 12rem;
+                  -webkit-text-stroke: 0.2rem $color-gray-lite;
+                }
+              }
+
+              @include tabletLandscapeXL {
+                & {
+                  font-size: 14rem;
+                }
+              }
+
+              @include desktopFullHD {
+                & {
+                  font-size: 15rem;
+                }
+              }
+
+              @include desktopQuadHD {
+                & {
+                  font-size: 17rem;
+                }
+              }
+
+              @include desktopUltraHD {
+                & {
+                  font-size: 20rem;
+                }
+              }
+            }
+          }
+
+          .bio-last-name {
+            margin-top: -2rem;
+
+            @include tabletPortrait {
+              & {
+                margin-top: -4rem;
+              }
+            }
+
+            @include tabletLandscapeXL {
+              & {
+                margin-top: -5rem;
+              }
+            }
+
+            @include desktopUltraHD {
+              & {
+                margin-top: -7rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .section-about-intro-container {
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+
+      @include tabletPortrait {
+        & {
+          width: 70%;
+        }
+      }
+
+      @include desktopUltraHD {
+        & {
+          width: 92%;
+        }
+      }
+
+      p {
+        text-transform: initial;
+        text-align: initial;
+        text-indent: 2rem;
+        font-size: 1.15rem;
+
+        @include tabletPortrait {
+          & {
+            font-size: 1.5rem;
+          }
+        }
+
+        @include tabletLandscape {
+          & {
+            font-size: 1.25rem;
+          }
+        }
+
+        @include desktop {
+          & {
+            line-height: 1.75rem;
+          }
+        }
+
+        @include tabletLandscapeXL {
+          & {
+            font-size: 1.5rem;
+          }
+        }
+
+        @include desktopQuadHD {
+          & {
+            font-size: 1.75rem;
+            line-height: 2rem;
+          }
+        }
+
+        @include desktopUltraHD {
+          & {
+            font-size: 2.5rem;
+            line-height: 3rem;
+          }
+        }
+      }
+    }
+  }
 }

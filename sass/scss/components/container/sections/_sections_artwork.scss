@@ -82,8 +82,15 @@
       @include desktopQuadHD {
         & {
           width: 70%;
-          top: 25%;
+          top: 23%;
           left: 1%;
+        }
+      }
+
+      @include desktopUltraHD {
+        & {
+          top: 25%;
+          left: -5%;
         }
       }
 
@@ -209,6 +216,16 @@
                 padding: 0.5rem 1rem;
               }
             }
+
+            @include desktop {
+              & {
+                border-radius: 0.35rem;
+                -webkit-border-radius: 0.35rem;
+                -moz-border-radius: 0.35rem;
+                -ms-border-radius: 0.35rem;
+                -o-border-radius: 0.35rem;
+              }
+            }
           }
         }
       }
@@ -228,7 +245,7 @@
           }
         }
 
-        @include desktop4K {
+        @include desktopUltraHD {
           & {
             font-size: 2rem;
           }
@@ -240,7 +257,7 @@
       width: 35rem;
       height: 35rem;
       position: relative;
-      // border: 1px solid blue;
+      //border: 1px solid blue;
 
       @include tabletPortrait {
         & {
@@ -288,6 +305,18 @@
           -moz-transform: scale(1.8);
           -ms-transform: scale(1.8);
           -o-transform: scale(1.8);
+        }
+      }
+
+      @include desktopUltraHD {
+        & {
+          top: 42%;
+          right: 15%;
+          transform: scale(2.7);
+          -webkit-transform: scale(2.7);
+          -moz-transform: scale(2.7);
+          -ms-transform: scale(2.7);
+          -o-transform: scale(2.7);
         }
       }
 

@@ -28,7 +28,7 @@
 
     @include desktop {
       & {
-        width: 35%;
+        width: 32%;
         margin-top: 10rem;
       }
     }
@@ -42,8 +42,8 @@
 
     @include desktopFullHD {
       & {
-        width: 30%;
-        margin-top: 15rem;
+        width: 27%;
+        margin-top: 20rem;
       }
     }
 
@@ -54,9 +54,22 @@
       }
     }
 
+    @include desktopUltraWide {
+      & {
+        width: 22%;
+      }
+    }
+
+    @include desktopUltraHD {
+      & {
+        width: 30%;
+        margin-top: 45rem;
+      }
+    }
+
     @include desktop4K {
       & {
-        // width: 25%;
+        width: 33%;
         margin-top: 40rem;
       }
     }
@@ -111,13 +124,19 @@
 
         @include desktopQuadHD {
           & {
-            font-size: 2.5rem;
+            font-size: 3rem;
+          }
+        }
+
+        @include desktopUltraHD {
+          & {
+            font-size: 4rem;
           }
         }
 
         @include desktop4K {
           & {
-            font-size: 3rem;
+            font-size: 5rem;
           }
         }
       }

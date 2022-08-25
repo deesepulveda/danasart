@@ -1,3 +1,174 @@
 .section-contact {
-  max-width: 120rem;
+  // border: 1px solid red;
+  @include flex-center;
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.9;
+  }
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: url(../public/images/yannis-papanastasopoulos-kKzbyDeb62M-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    z-index: -2;
+  }
+
+  .contact-wrapper {
+    width: 30rem;
+    height: 35rem;
+    position: relative;
+    animation-delay: 300ms;
+
+    @include tabletPortrait {
+      & {
+        width: 45rem;
+        height: 45rem;
+        margin-bottom: 10rem;
+      }
+    }
+
+    @include desktop {
+      & {
+        width: 45rem;
+        height: 40rem;
+      }
+    }
+
+    @include desktopFullHD {
+      & {
+        width: 55rem;
+        height: 50rem;
+      }
+    }
+
+    @include desktopQuadHD {
+      & {
+        width: 65rem;
+        height: 60rem;
+      }
+    }
+
+    @include desktopUltraHD {
+      & {
+        width: 85rem;
+        height: 80rem;
+      }
+    }
+
+    .contact-box {
+      @include keep-it-hundo;
+      @include flex-center;
+      @include transit3;
+      position: relative;
+
+      &::after {
+        content: "";
+        @include keep-it-hundo;
+        @include absol-center;
+        background-color: $color-gray-lite;
+        opacity: 0.7;
+        z-index: -1;
+        border-radius: 1rem;
+        -webkit-border-radius: 1rem;
+        -moz-border-radius: 1rem;
+        -ms-border-radius: 1rem;
+        -o-border-radius: 1rem;
+      }
+
+      form {
+        width: 80%;
+        height: 80%;
+        @include flex-center-col;
+
+        @include tabletPortrait {
+          & {
+            width: 70%;
+            height: 70%;
+          }
+        }
+
+        @include desktopQuadHD {
+          & {
+            width: 80%;
+            height: 85%;
+          }
+        }
+
+        .user-box {
+          width: 100%;
+          height: 5rem;
+          position: relative;
+          margin-bottom: 4rem;
+
+          input {
+            @include keep-it-hundo;
+            background: transparent;
+            border: none;
+            color: $color-lite;
+            font-size: 1.75rem;
+            border-bottom: 0.1rem solid $color-lite;
+            @include transit3;
+            outline: none;
+          }
+
+          label {
+            @include keep-it-hundo;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 1.5rem;
+            text-align: left;
+            text-transform: capitalize;
+            line-height: 5rem;
+            pointer-events: none;
+            @include transit3;
+          }
+
+          input:focus ~ label,
+          input:valid ~ label {
+            top: -40px;
+            left: 0;
+            color: $color-cyan;
+            font-size: 1.3rem;
+            @include transit3;
+          }
+        }
+
+        button {
+          position: relative;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 0.5rem 2rem;
+          font-size: 1.75rem;
+          letter-spacing: 0.4rem;
+          font-family: $quaternary-font;
+          background: transparent;
+          color: $color-lite;
+          border: 0.1rem solid $color-lite;
+          @include transit3;
+          @include text-shadowgray;
+          border-radius: 0.5rem;
+          -webkit-border-radius: 0.5rem;
+          -moz-border-radius: 0.5rem;
+          -ms-border-radius: 0.5rem;
+          -o-border-radius: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $color-lite;
+            color: $color-dark;
+          }
+        }
+      }
+    }
+  }
 }
