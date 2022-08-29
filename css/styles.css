@@ -621,7 +621,8 @@ body {
 }
 .section-artwork .section-artwork-container .section-artwork-frames-container {
   width: 35rem;
-  height: 35rem;
+  height: 34rem;
+  margin-bottom: 4rem;
   position: relative;
 }
 @media only screen and (min-width: 768px) {
@@ -728,8 +729,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgb(5, 5, 5);
-  opacity: 0.9;
+  background: linear-gradient(to bottom, rgb(5, 5, 5), rgba(5, 5, 5, 0.8156862745));
+  z-index: -1;
 }
 .section-contact::after {
   content: "";
@@ -748,6 +749,7 @@ body {
 .section-contact .contact-wrapper {
   width: 30rem;
   height: 35rem;
+  margin-bottom: 5rem;
   position: relative;
   animation-delay: 300ms;
 }
@@ -807,8 +809,8 @@ body {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
-  background-color: rgb(102, 97, 97);
-  opacity: 0.7;
+  background-color: rgb(5, 5, 5);
+  opacity: 0.5;
   z-index: -1;
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
@@ -1417,7 +1419,7 @@ body {
   width: 100%;
   height: 10rem;
   position: fixed;
-  bottom: 5%;
+  bottom: 4%;
   display: flex;
   justify-content: center;
   align-items: center;

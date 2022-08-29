@@ -6,8 +6,8 @@
     content: "";
     @include keep-it-hundo;
     @include absol-topLeftZero;
-    background-color: $color-dark;
-    opacity: 0.9;
+    background: linear-gradient(to bottom, $color-dark, #050505d0);
+    z-index: -1;
   }
 
   &::after {
@@ -25,6 +25,7 @@
   .contact-wrapper {
     width: 30rem;
     height: 35rem;
+    margin-bottom: 5rem;
     position: relative;
     animation-delay: 300ms;
 
@@ -74,8 +75,8 @@
         content: "";
         @include keep-it-hundo;
         @include absol-center;
-        background-color: $color-gray-lite;
-        opacity: 0.7;
+        background-color: $color-dark;
+        opacity: 0.5;
         z-index: -1;
         border-radius: 1rem;
         -webkit-border-radius: 1rem;
